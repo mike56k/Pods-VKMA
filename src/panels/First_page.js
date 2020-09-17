@@ -20,9 +20,9 @@ const First_page = ({ id, go}) => (
       
             Подкасты</PanelHeader>
           <Placeholder
-            icon={<Icon56AddCircleOutline />}
+            icon={<Icon56AddCircleOutline  style={{marginTop:213.67, marginBottom:16}}/>}
             header="Добавьте первый подкаст"
-            action={<Button size="l" onClick={() => go('second_page')}>Добавить подкаст</Button>}
+            action={<Button size="l" onClick={() => go('second_page')} style={{marginTop:24}}>Добавить подкаст</Button>}
           >
             Добавляйте, редактируйте и делитесь подкастами вашего сообщества
           </Placeholder>

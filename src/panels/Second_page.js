@@ -17,13 +17,13 @@ const Second_page = ({ id, go}) => (
         <Panel >
           <PanelHeader left={
         <PanelHeaderButton  onClick={() => go('first_page')}>
-          { <Icon28ChevronBack />}
+          { <Icon28ChevronBack style={{margin:12.6}}/>}
           </PanelHeaderButton>}>Новый подкаст</PanelHeader>
           <Div>
           <div  style={{display: 'flex'}}>
           
-          <Card size="s">
-            <div style={{ padding:16 }}>
+          <Card size="s" style={{marginLeft:12}}>
+            <div style={{ padding:23.43 }}>
             {<Icon56AddGalleryOutline  />}
             </div>
           </Card>
@@ -34,8 +34,8 @@ const Second_page = ({ id, go}) => (
 
           </div>
           
-          <FormLayout>
-          <Textarea top="О себе" />
+          <FormLayout style={{marginTop:29, marginBottom:44}}>
+          <Textarea top="Описание подкаста" />
          </FormLayout>
       </Div>
       <Placeholder
@@ -47,9 +47,9 @@ const Second_page = ({ id, go}) => (
           </Placeholder>
           <Separator wide />
           <FormLayout>
-        <Checkbox>Ненормативный контент</Checkbox>
-        <Checkbox>Исключить эпизод из экспорта</Checkbox>
-        <Checkbox>Трейлер подкаста</Checkbox>
+        <Checkbox style={{marginBottom:26}}>Ненормативный контент</Checkbox>
+        <Checkbox style={{marginBottom:26}}>Исключить эпизод из экспорта</Checkbox>
+        <Checkbox style={{marginBottom:26}}>Трейлер подкаста</Checkbox>
         </FormLayout>
         <Group separator="hide" description="При публикации записи с эпизодом, он становится доступным для всех пользователей">
         <Cell expandable  onClick={() => this.setState({ activePanel: 'panel2' })}>
@@ -57,7 +57,7 @@ const Second_page = ({ id, go}) => (
             </Cell>
         </Group>
           
-        <Button size="xl"  onClick={() => go('sixth_page')}>Далее</Button>
+        <Button size="xl"  onClick={() => go('sixth_page')} style={{marginTop:36}}>Далее</Button>
         </Panel>
       </View>
 	</Panel>

@@ -20,7 +20,7 @@ const Last_page = ({ id, go}) => (
       
           Подкасты</PanelHeader>
         <Placeholder
-          icon={<Icon56CheckCircleOutline />}
+          icon={<Icon56CheckCircleOutline  style={{marginTop:203.67}}/>}
           header="Поделиться подкастом"
           action={<Button size="l" onClick={() => go('second_page')}>Подкаст добавлен</Button>}
         >
