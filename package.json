@@ -2,18 +2,20 @@
   "name": "pods",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://mike56k.github.io/Pods-VKMA/",
   "main": "index.js",
   "scripts": {
     "start": "cross-env PORT=10888 HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "predeploy": "npm run build",
-    "deploy": "vk-miniapps-deploy"
+    "deploy": "gh-pages -d build"
   },
-  "keywords": [],
+    "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "cross-env": "^5.2.1",
+    "gh-pages": "^3.1.0",
     "react-hot-loader": "^4.12.21",
     "react-scripts": "^3.4.3"
   },
