@@ -8,6 +8,8 @@ import Cell from "@vkontakte/vkui/dist/components/Cell/Cell";
 import Div from "@vkontakte/vkui/dist/components/Div/Div";
 import Avatar from "@vkontakte/vkui/dist/components/Avatar/Avatar";
 import Draggable from "react-draggable";
+
+import {FixedLayout} from "@vkontakte/vkui";
 const Home = ({ id, go, fetchedUser }) => (
   <Panel id={id}>
     <PanelHeader>Example</PanelHeader>
@@ -57,6 +59,13 @@ const Home = ({ id, go, fetchedUser }) => (
         <div className="handle">Drag from here</div>
       </div>
     </Draggable>
+    <FixedLayout vertical='bottom'>
+					<Div>
+						<Button mode='commerce' size="xl" level="2" onClick={() => go('first_page')}>
+							ОК, всё понятно
+						</Button>
+					</Div>
+				</FixedLayout>
   </Panel>
 );
 

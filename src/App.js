@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+ import React, { useState, useEffect } from "react";
 import bridge from "@vkontakte/vk-bridge";
 import View from "@vkontakte/vkui/dist/components/View/View";
 import "@vkontakte/vkui/dist/vkui.css";
-
 import Home from "./panels/Home";
 import Persik from "./panels/Persik";
+import First_page  from  './panels/First_page';
+import Second_page from "./panels/Second_page";
 
 const App = () => {
-  const [activePanel, setActivePanel] = useState("home");
+  const [activePanel, setActivePanel] = useState("first_page");
   const [fetchedUser, setUser] = useState(null);
 
   useEffect(() => {
@@ -25,14 +26,16 @@ const App = () => {
     fetchData();
   }, []);
 
-  const go = (e) => {
-    setActivePanel(e.currentTarget.dataset.to);
-  };
+  const go = panel => {
+		setActivePanel(panel);
+	};
 
   return (
     <View activePanel={activePanel}>
       <Home id="home" fetchedUser={fetchedUser} go={go} />
       <Persik id="persik" go={go} />
+      <First_page id="first_page" go={go}/>
+      <Second_page id="second_page" go={go}/>
     </View>
   );
 };
