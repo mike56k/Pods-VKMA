@@ -6,6 +6,8 @@ import Home from "./panels/Home";
 import Persik from "./panels/Persik";
 import First_page  from  './panels/First_page';
 import Second_page from "./panels/Second_page";
+import Sixth_page from  "./panels/Sixth_page";
+import Last_page from "./panels/Last_page";
 
 const App = () => {
   const [activePanel, setActivePanel] = useState("first_page");
@@ -36,6 +38,8 @@ const App = () => {
       <Persik id="persik" go={go} />
       <First_page id="first_page" go={go}/>
       <Second_page id="second_page" go={go}/>
+      <Sixth_page id="sixth_page" go={go}/>
+      <Last_page id="last_page" go={go}/>
     </View>
   );
 };

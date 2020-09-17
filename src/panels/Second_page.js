@@ -23,8 +23,8 @@ const Second_page = ({ id, go}) => (
           <div  style={{display: 'flex'}}>
           
           <Card size="s">
-            <div style={{width:72, height:72 }}>
-            {<Icon56AddGalleryOutline />}
+            <div style={{ padding:16 }}>
+            {<Icon56AddGalleryOutline  />}
             </div>
           </Card>
           
@@ -57,7 +57,7 @@ const Second_page = ({ id, go}) => (
             </Cell>
         </Group>
           
-        <Button size="xl" >Далее</Button>
+        <Button size="xl"  onClick={() => go('sixth_page')}>Далее</Button>
         </Panel>
       </View>
 	</Panel>
