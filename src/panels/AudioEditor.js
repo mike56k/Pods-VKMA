@@ -112,10 +112,10 @@ const AudioEditor = ({ id, go }) => {
               //   onFinishedPlaying={this.handleSongFinishedPlaying}
             />
           </Card>
+          <Button mode="outline" size="xl" onClick={() => go("sixth_page")}>
+            Добавить фоновую музыку
+          </Button>
         </CardGrid>
-        <Button mode="outline" size="xl" onClick={() => go("sixth_page")}>
-          Добавить фоновую музыку
-        </Button>{" "}
       </Group>
     </Panel>
   );
