@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { platform, IOS } from "@vkontakte/vkui";
+import { platform, IOS, Placeholder, CellButton, Input } from "@vkontakte/vkui";
 import Panel from "@vkontakte/vkui/dist/components/Panel/Panel";
 import PanelHeader from "@vkontakte/vkui/dist/components/PanelHeader/PanelHeader";
 import PanelHeaderButton from "@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton";
@@ -11,13 +11,13 @@ import "react-h5-audio-player/lib/styles.css";
 import "./AudioEditor.css";
 import Icon24Play from "@vkontakte/icons/dist/24/play";
 import Icon24Pause from "@vkontakte/icons/dist/24/pause";
+import Icon24Add from "@vkontakte/icons/dist/24/add";
 import { Button } from "@vkontakte/vkui";
 import Sound from "react-sound";
 const osName = platform();
 
 const AudioEditor = ({ id, go }) => {
-  const [status, setStatus] = useState(Sound.status.STOPPED);
-
+  const [count, setCount] = useState(0);
   useEffect(() => {
     var audio = document.getElementById("audio");
 
@@ -103,18 +103,19 @@ const AudioEditor = ({ id, go }) => {
                 {isPlaying ? <Icon24Pause /> : <Icon24Play />}
               </Button> */}
             </div>
-            <Sound
-              url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
-              playStatus={status}
-              playFromPosition={300 /* in milliseconds */}
-              //   onLoading={this.handleSongLoading}
-              //   onPlaying={this.handleSongPlaying}
-              //   onFinishedPlaying={this.handleSongFinishedPlaying}
-            />
           </Card>
           <Button mode="outline" size="xl" onClick={() => go("sixth_page")}>
             Добавить фоновую музыку
           </Button>
+          <Placeholder
+            header="ТАЙМКОДЫ"
+            action={
+              <CellButton before={<Icon24Add />}>Добавить таймкод</CellButton>
+            }
+          >
+            Отметки времени с названием темы. Позволяют слушателям легче
+            путешествовать по подкастам.
+          </Placeholder>
         </CardGrid>
       </Group>
     </Panel>
