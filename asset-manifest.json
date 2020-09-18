@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/Pods-VKMA/static/css/main.724f1608.chunk.css",
-    "main.js": "/Pods-VKMA/static/js/main.467822ec.chunk.js",
-    "main.js.map": "/Pods-VKMA/static/js/main.467822ec.chunk.js.map",
+    "main.js": "/Pods-VKMA/static/js/main.0e812cd9.chunk.js",
+    "main.js.map": "/Pods-VKMA/static/js/main.0e812cd9.chunk.js.map",
     "runtime-main.js": "/Pods-VKMA/static/js/runtime-main.2d2affab.js",
     "runtime-main.js.map": "/Pods-VKMA/static/js/runtime-main.2d2affab.js.map",
     "static/css/2.5e058d6b.chunk.css": "/Pods-VKMA/static/css/2.5e058d6b.chunk.css",
-    "static/js/2.839d16f0.chunk.js": "/Pods-VKMA/static/js/2.839d16f0.chunk.js",
-    "static/js/2.839d16f0.chunk.js.map": "/Pods-VKMA/static/js/2.839d16f0.chunk.js.map",
+    "static/js/2.6f620fd5.chunk.js": "/Pods-VKMA/static/js/2.6f620fd5.chunk.js",
+    "static/js/2.6f620fd5.chunk.js.map": "/Pods-VKMA/static/js/2.6f620fd5.chunk.js.map",
     "index.html": "/Pods-VKMA/index.html",
-    "precache-manifest.68bcf1103e187a64afc9b814e125f09f.js": "/Pods-VKMA/precache-manifest.68bcf1103e187a64afc9b814e125f09f.js",
+    "precache-manifest.c41977e258fa09ad0fa1d56eca50f276.js": "/Pods-VKMA/precache-manifest.c41977e258fa09ad0fa1d56eca50f276.js",
     "service-worker.js": "/Pods-VKMA/service-worker.js",
     "static/css/2.5e058d6b.chunk.css.map": "/Pods-VKMA/static/css/2.5e058d6b.chunk.css.map",
     "static/css/main.724f1608.chunk.css.map": "/Pods-VKMA/static/css/main.724f1608.chunk.css.map",
-    "static/js/2.839d16f0.chunk.js.LICENSE.txt": "/Pods-VKMA/static/js/2.839d16f0.chunk.js.LICENSE.txt"
+    "static/js/2.6f620fd5.chunk.js.LICENSE.txt": "/Pods-VKMA/static/js/2.6f620fd5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2d2affab.js",
     "static/css/2.5e058d6b.chunk.css",
-    "static/js/2.839d16f0.chunk.js",
+    "static/js/2.6f620fd5.chunk.js",
     "static/css/main.724f1608.chunk.css",
-    "static/js/main.467822ec.chunk.js"
+    "static/js/main.0e812cd9.chunk.js"
   ]
 }
