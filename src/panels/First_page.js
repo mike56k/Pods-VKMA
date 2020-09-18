@@ -36,4 +36,8 @@ const First_page = ({ id, go }) => (
     );
   </Panel>
 );
+First_page.propTypes = {
+  id: PropTypes.string.isRequired,
+  go: PropTypes.func.isRequired,
+};
 export default First_page;

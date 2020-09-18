@@ -15,19 +15,18 @@ import { Button } from "@vkontakte/vkui";
 import Sound from "react-sound";
 const osName = platform();
 
-const AudioEditor = (props) => {
+const AudioEditor = ({ id, go }) => {
   const [status, setStatus] = useState(Sound.status.STOPPED);
-  const [isPlaying, setIsPlaying] = useState(false);
+
   useEffect(() => {
-    var file = document.getElementById("thefile");
     var audio = document.getElementById("audio");
-    file.onchange = function () {
-      var files = this.files;
-      audio.src = URL.createObjectURL(files[0]);
-      audio.load();
-      audio.play();
+
+    audio.src = JSON.parse(localStorage.getItem("audio"));
+    audio.load();
+    try {
       var context = new AudioContext();
       var src = context.createMediaElementSource(audio);
+
       var analyser = context.createAnalyser();
       var canvas = document.getElementById("canvas");
       var ctx = canvas.getContext("2d");
@@ -58,22 +57,21 @@ const AudioEditor = (props) => {
         ctx.fillRect(0, 0, WIDTH, HEIGHT);
 
         for (var i = 0; i < bufferLength; i++) {
-          barHeight = dataArray[i];
+          barHeight = dataArray[i] / 1.8;
           ctx.fillStyle = "#3F8AE0";
           ctx.fillRect(x, HEIGHT - barHeight, barWidth, barHeight);
           x += barWidth + 3;
         }
       }
 
-      audio.play();
       renderFrame();
-    };
+    } catch {}
   });
   return (
-    <Panel id={props.id}>
+    <Panel id={id}>
       <PanelHeader
         left={
-          <PanelHeaderButton onClick={props.go} data-to="home">
+          <PanelHeaderButton onClick={() => go("second_page")}>
             {osName === IOS ? <Icon28ChevronBack /> : <Icon24Back />}
           </PanelHeaderButton>
         }
@@ -85,13 +83,12 @@ const AudioEditor = (props) => {
         <CardGrid>
           <Card size="l" mode="shadow" id="card">
             <div id="content">
-              <input type="file" id="thefile" accept="audio/*" />
               <canvas
                 id="canvas"
                 style={{ height: "96px", width: "100%" }}
               ></canvas>
               <audio id="audio" controls></audio>
-              <Button
+              {/* <Button
                 size="l"
                 onClick={() => {
                   if (isPlaying) {
@@ -104,7 +101,7 @@ const AudioEditor = (props) => {
                 }}
               >
                 {isPlaying ? <Icon24Pause /> : <Icon24Play />}
-              </Button>
+              </Button> */}
             </div>
             <Sound
               url="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_700KB.mp3"
@@ -116,6 +113,9 @@ const AudioEditor = (props) => {
             />
           </Card>
         </CardGrid>
+        <Button mode="outline" size="xl" onClick={() => go("sixth_page")}>
+          Добавить фоновую музыку
+        </Button>{" "}
       </Group>
     </Panel>
   );

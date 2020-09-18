@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-    "keywords": [],
+  "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -20,6 +20,7 @@
     "react-scripts": "^3.4.3"
   },
   "dependencies": {
+    "@version/react-router-v3": "^1.0.0",
     "@vkontakte/icons": "^1.41.0",
     "@vkontakte/vk-bridge": "^2.2.8",
     "@vkontakte/vk-miniapps-deploy": "0.0.17",
@@ -36,6 +37,7 @@
     "react-dom": "^16.13.1",
     "react-h5-audio-player": "^3.4.1",
     "react-p5": "^1.3.6",
+    "react-router": "^5.2.0",
     "react-sound": "^1.2.0"
   },
   "browserslist": {
